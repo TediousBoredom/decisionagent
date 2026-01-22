@@ -1,0 +1,47 @@
+# Training Configuration
+
+# Project settings
+project_name: "alphapolicy"
+run_name: "diffusion_trading_v1"
+
+# Data settings
+symbols: ["AAPL", "MSFT", "GOOGL", "AMZN", "TSLA"]
+start_date: "2018-01-01"
+end_date: "2024-01-01"
+data_source: "yahoo"  # yahoo, binance, alpaca
+
+# Model architecture
+seq_length: 100
+action_seq_length: 10
+hidden_dim: 256
+cond_dim: 128
+indicator_dim: 20
+num_timesteps: 1000
+
+# Training parameters
+batch_size: 32
+num_epochs: 100
+learning_rate: 0.0001
+weight_decay: 0.00001
+num_workers: 4
+
+# Risk constraints
+max_position_size: 1.0
+max_leverage: 3.0
+max_drawdown: 0.2
+max_daily_loss: 0.05
+min_sharpe_ratio: 1.0
+max_var_95: 0.03
+
+# Optimization
+gradient_clip: 1.0
+warmup_epochs: 5
+
+# Checkpointing
+save_every: 10
+checkpoint_dir: "./checkpoints"
+
+# Logging
+use_wandb: true
+log_every: 10
+

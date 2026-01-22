@@ -1,0 +1,59 @@
+# Trading Configuration
+
+# Model settings
+seq_length: 100
+action_seq_length: 10
+hidden_dim: 256
+cond_dim: 128
+indicator_dim: 20
+num_timesteps: 1000
+
+# Risk constraints
+max_position_size: 1.0
+max_leverage: 2.0
+max_drawdown: 0.15
+max_daily_loss: 0.03
+min_sharpe_ratio: 1.5
+max_var_95: 0.02
+
+# Backtest settings
+backtest_start: "2023-01-01"
+backtest_end: "2024-01-01"
+
+# Execution settings
+commission_rate: 0.001
+slippage: 0.001
+max_order_size: 10000.0
+
+# Strategy settings
+num_samples: 3  # Number of strategy samples to generate
+use_ddim: true
+ddim_steps: 50
+temperature: 1.0
+
+# Position sizing
+base_position_size: 1.0
+use_kelly: true
+target_volatility: 0.15
+
+# Risk management
+enable_stop_loss: true
+enable_take_profit: true
+enable_trailing_stop: false
+position_scaling: true  # Scale position based on volatility
+
+# Monitoring
+check_risk_every: 1  # Check risk constraints every N bars
+log_trades: true
+save_performance: true
+
+# Paper trading settings (for paper mode)
+paper_update_interval: 60  # seconds
+paper_data_source: "yahoo"
+
+# Live trading settings (for live mode)
+broker: "alpaca"  # alpaca, binance, interactive_brokers
+api_key: ""  # Set via environment variable
+api_secret: ""  # Set via environment variable
+use_testnet: true
+
