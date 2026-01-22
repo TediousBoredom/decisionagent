@@ -1,5 +1,17 @@
 # AlphaPolicy: Diffusion-Based Autonomous Trading System
 
+## alpha_policy branch
+
+This branch contains an alternative policy / decision-agent implementation.
+It is **NOT intended to be merged into `main`**.
+It's a comprehensive AI-driven automated trading system based on diffusion models. This system will learn from high-return trading strategies and execute trades autonomously with risk control.
+
+Purpose:
+- research on policy learning
+- diffusion / decision agent experiments
+- parallel exploration independent from main codebase
+
+
 ## 概述 (Overview)
 
 AlphaPolicy 是一个基于扩散模型（Diffusion Models）的全自动交易系统，能够学习市场中已验证的高收益策略，并在不同市场状态下自主执行交易决策。
